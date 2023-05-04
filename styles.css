@@ -10,16 +10,25 @@
 
 body{
   background-color: rgb(240, 240, 240) ;
-
+  height: 100vh ;
 }
 
+
+.glass-efect {
+  background: rgba(177, 235, 159, 0.219);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
 .header {
   padding: 20px;
   position: sticky;
   top: 0;
   left: 0;
   display: flex;
+  z-index: 10;
   justify-content: space-between;
+  /* From https://css.glass */
 }
 
 .logo {
@@ -45,11 +54,14 @@ body{
 .main {
     display: flex;
     padding: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
  }
 
 
 .menu {
-  height: calc(100vh - 88px);
+  height: 100%;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -79,10 +91,6 @@ body{
   color: white;
 }
 
-.main {
-  display: flex;
-}
-
 .brand_phrase {
   font-size: 4rem;
   margin-top: 0px;
@@ -90,12 +98,14 @@ body{
 
 .content{
     flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .content_main{
     overflow: hidden;
+    height: 100%  ;
     flex: 1;
 }
 
@@ -121,7 +131,7 @@ body{
     min-width: 100px
 }
 
-
+  
 @media (max-width: 500px) {
     .menu {
       height: fit-content;
@@ -148,11 +158,13 @@ body{
 /* login ----------------------- */
 
 .form_wrapper {
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
-  background-color: white;
   display: flex;
-  width: 100%;
+  /* From https://css.glass */
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 300px    ;
 }
 
 .form_wrapper form{
@@ -178,6 +190,8 @@ body{
 }
 .input_wrapper{
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .input_wrapper input{
   width: 100%;
@@ -186,5 +200,28 @@ body{
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
-  background-color: #ccc;
+  background-color: #ffffff85;
+}
+
+footer{
+  padding: 30px;
+  background-color: white;
+}
+
+.checkbox_wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.checkbox_wrapper label {
+  margin-right: 20px;
+}
+
+.radio_wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 }

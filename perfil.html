@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header glass-efect">
+      <div class="logo" onclick="vaiParaPaginaInicial()">
+          <img src="assets/logos.svg" alt="logo da imagine" />
+          <span>Imagine</span>
+      </div>
+      <div class="avatar"  onclick="vaiParaPerfil()">
+          <span id="user_name">Micael</span>
+          <img src="assets/avatar.png" alt="avatar do usuário" id="user_image" />
+      </div>
+  </header>
+    <main class="main">
+      <div class="form_wrapper glass-efect ">
+        <form id="form">
+            <div class="input_wrapper">
+                <label for="login">Nome</label>
+                <input type="text" name="login" id="login">
+            </div>
+
+            <div class="input_wrapper">
+                <label for="password">Sobrenome</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div class="input_wrapper">
+              <label for="birth_date">Data de nascimento</label>
+              <input type="date" name="birth_date" id="birth_date">
+            </div>
+
+            <div class="checkbox_wrapper">
+              <label for="birth_date">Estudante da furb?</label>
+              <input type="checkbox" name="birth_date" id="birth_date">
+            </div>
+
+            <div class="radio_wrapper">
+              <input type="radio" id="contactChoice1" name="contact" value="email" />
+              <label for="contactChoice1">Email</label>
+        
+              <input type="radio" id="contactChoice2" name="contact" value="phone" />
+              <label for="contactChoice2">Phone</label>
+        
+              <input type="radio" id="contactChoice3" name="contact" value="mail" />
+              <label for="contactChoice3">Mail</label>
+            </div>
+
+            <button type="submit">Autorizar</button>
+        </form>
+    </div>
+    </main>
+    <footer>Micael Luan Conti</footer>
+    <script src="logic.js"></script>
+  </body>
+</html>
